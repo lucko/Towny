@@ -1,11 +1,12 @@
 Towny advanced is developed by ELgarL.
 
-Releases, Dev builds and all other plugins I maintain/dev are available from...
+Unlike upstream:
+- This fork drops support for all Permission/Economy providers, aside from Vault.
+- This fork uses Maven for compilation.
 
-* http://palmergames.com/towny
+The changes above were done quickly and without much thought. I specifically tried to avoid touching any code, it's all pretty horrible.
 
-If you need help or just want to chat, join us in our IRC channel #towny on the Esper.net network.
-
+From upstream:
 I took over a few years ago and am just one of many devs who have held this position in the past.
 
 Licensing:
