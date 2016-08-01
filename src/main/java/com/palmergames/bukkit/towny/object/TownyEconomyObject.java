@@ -52,9 +52,9 @@ public class TownyEconomyObject extends TownyObject {
 		if (canPayFromHoldings(amount)) {
 			if (TownyEconomyHandler.isActive())
 				if (amount > 0) {
-					return TownyEconomyHandler.subtract(getEconomyName(), amount, getBukkitWorld());
+					return TownyEconomyHandler.subtract(getEconomyName(), amount);
 				} else {
-					return TownyEconomyHandler.add(getEconomyName(), amount, getBukkitWorld());
+					return TownyEconomyHandler.add(getEconomyName(), amount);
 				}
 		}
 		return false;
@@ -81,7 +81,7 @@ public class TownyEconomyObject extends TownyObject {
 
 	private boolean _collect(double amount) throws EconomyException {
 
-		return TownyEconomyHandler.add(getEconomyName(), amount, getBukkitWorld());
+		return TownyEconomyHandler.add(getEconomyName(), amount);
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class TownyEconomyObject extends TownyObject {
 	public double getHoldingBalance() throws EconomyException {
 
 		try {
-			return TownyEconomyHandler.getBalance(getEconomyName(), getBukkitWorld());
+			return TownyEconomyHandler.getBalance(getEconomyName());
 		} catch (NoClassDefFoundError e) {
 			e.printStackTrace();
 			throw new EconomyException("Economy error getting holdings for " + getEconomyName());
@@ -183,7 +183,7 @@ public class TownyEconomyObject extends TownyObject {
 	 */
 	public boolean canPayFromHoldings(double amount) throws EconomyException {
 
-		return TownyEconomyHandler.hasEnough(getEconomyName(), amount, getBukkitWorld());
+		return TownyEconomyHandler.hasEnough(getEconomyName(), amount);
 	}
 
 	/**
